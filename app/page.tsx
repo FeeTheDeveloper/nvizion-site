@@ -121,16 +121,8 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="relative xl:pl-6">
+              <div className="relative">
                 <div className="absolute -inset-6 rounded-[40px] bg-[radial-gradient(circle,rgba(184,154,115,0.2),transparent_58%)] blur-3xl" />
-                <div className="absolute -left-3 top-8 hidden border border-white/10 bg-brand-ink/82 px-4 py-3 backdrop-blur-md xl:block">
-                  <p className="text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-brand-gold">
-                    Base Region
-                  </p>
-                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-brand-ivory">
-                    {baseRegion}
-                  </p>
-                </div>
                 <div className="absolute -right-2 bottom-12 hidden border border-brand-gold/18 bg-brand-ink/84 px-4 py-4 backdrop-blur-md xl:block">
                   <p className="text-[0.58rem] font-semibold uppercase tracking-[0.3em] text-brand-gold">
                     Mission Focus
