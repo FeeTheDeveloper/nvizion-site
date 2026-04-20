@@ -39,6 +39,7 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
+    { label: "Drivers", href: "/drivers" },
     { label: "Contact", href: "/contact" }
   ]
 };
@@ -136,6 +137,49 @@ export const pageHeroChips = {
   services: ["Freight Transportation", "Dedicated Support", "Time-Sensitive Response"],
   contact: ["Quote Requests", siteConfig.veteranOwnedLabel, siteConfig.baseLocation]
 };
+
+export const driverPageChips = [
+  siteConfig.veteranOwnedLabel,
+  "Driver Admissions",
+  "Company Drivers and Owner-Operators"
+];
+
+export const driverOpportunityHighlights = [
+  {
+    title: "Company Drivers",
+    body: "Apply if you are a dependable professional who can represent the company with punctuality, communication, and disciplined execution."
+  },
+  {
+    title: "Owner-Operators",
+    body: "Apply if you are an independent operator seeking contract opportunities with a transportation company that values clear standards and reliable follow-through."
+  },
+  {
+    title: "Operational Fit",
+    body: "Applicants should be prepared for review based on qualifications, documentation, driving history, and fit for current transportation needs."
+  }
+];
+
+export const driverReviewStandards = [
+  "Commercial driving experience and driver type fit",
+  "CDL status, DOT medical card status, and document readiness",
+  "Driving history, major moving violations, and preventable accident history",
+  "Availability, route preferences, and overall operational alignment"
+];
+
+export const driverApplicationSteps = [
+  {
+    title: "Prescreen",
+    body: "Complete the admissions questions so our team can review licensing, availability, and baseline qualification details quickly."
+  },
+  {
+    title: "Application Review",
+    body: "We review the full submission for professionalism, documentation readiness, driving history, and current opportunity alignment."
+  },
+  {
+    title: "Follow-Up",
+    body: "If there is a fit for current opportunities, our team will contact you for the next conversation or supporting documents."
+  }
+];
 
 export const heroVisualHighlights = [
   {

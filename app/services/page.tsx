@@ -120,7 +120,7 @@ export default function ServicesPage() {
               title="Let&apos;s discuss the transportation solution that fits your operation."
               description="We can talk through freight movement, recurring support, or a more dedicated transportation requirement based on how your business moves."
               primaryAction={{ label: "Request a Quote", href: "/contact" }}
-              secondaryAction={{ label: "About Nvizion", href: "/about" }}
+              secondaryAction={{ label: "Driver Sign Up", href: "/drivers" }}
               aside={
                 <div className="grid gap-3">
                   <div className="border border-white/10 bg-black/[0.18] px-4 py-4">

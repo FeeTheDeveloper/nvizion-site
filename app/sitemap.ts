@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/about", "/services", "/contact"];
+  const routes = ["", "/about", "/services", "/drivers", "/contact"];
 
   return routes.map((route, index) => ({
     url: `${siteConfig.url}${route}`,
@@ -12,4 +12,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date()
   }));
 }
-

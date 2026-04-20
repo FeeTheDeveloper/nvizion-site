@@ -3,6 +3,9 @@ node_modules
 out
 dist
 coverage
+.env
+.env.*
+!.env.example
 .DS_Store
 *.log
 npm-debug.log*
@@ -12,4 +15,3 @@ pnpm-debug.log*
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
-

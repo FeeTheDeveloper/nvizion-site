@@ -498,6 +498,9 @@ export default function HomePage() {
                     <Link href="/contact" className="btn-primary">
                       Get a Quote
                     </Link>
+                    <Link href="/drivers" className="btn-secondary">
+                      Apply to Drive
+                    </Link>
                     <Link href="/services" className="btn-secondary">
                       View Services
                     </Link>
