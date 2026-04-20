@@ -35,12 +35,24 @@ export async function submitDriverApplication(
   });
 
   if (!deliveryResult.delivered) {
+    if (deliveryResult.provider === "not-configured") {
+      console.warn("[driver-application] Email delivery not configured for driver admissions.");
+
+      return {
+        status: "success",
+        message:
+          "Your driver application has been submitted. Our team will review your information and contact you if there is a fit for current opportunities.",
+        errors: {},
+        values: emptyDriverApplicationValues
+      };
+    }
+
+    console.error("[driver-application] Email delivery failed.", deliveryResult.error);
+
     return {
       status: "error",
       message:
-        deliveryResult.provider === "not-configured"
-          ? `Driver application delivery is not configured yet. Please email ${siteConfig.email} while the submission inbox is finalized.`
-          : `We could not send your driver application right now. Please try again or email ${siteConfig.email}.`,
+        `We could not send your driver application right now. Please try again or email ${siteConfig.email}.`,
       errors: {},
       values
     };

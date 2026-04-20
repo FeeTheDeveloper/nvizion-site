@@ -327,7 +327,12 @@ export function DriverApplicationForm() {
   const message = state?.message ?? initialDriverApplicationFormState.message;
 
   return (
-    <form action={formAction} className="surface-card rounded-[30px] p-6 sm:p-8">
+    <form
+      id="driver-application-form"
+      action={formAction}
+      noValidate
+      className="surface-card scroll-mt-32 rounded-[30px] p-6 sm:scroll-mt-36 sm:p-8"
+    >
       <div className="space-y-8">
         <div className="space-y-4">
           <p className="eyebrow">
@@ -336,7 +341,7 @@ export function DriverApplicationForm() {
           </p>
           <div className="space-y-3">
             <h2 className="text-3xl font-semibold uppercase tracking-[0.08em] text-brand-ivory">
-              Start the driver application
+              Driver application and prescreening
             </h2>
             <p className="text-sm leading-7 text-brand-mist/76">
               Complete the prescreening and admissions form below. Our team reviews driver
@@ -615,8 +620,9 @@ export function DriverApplicationForm() {
             qualifications, documentation readiness, driving history, and current operational fit.
           </p>
           <SubmitButton
-            idleLabel="Start Driver Application"
+            idleLabel="Submit Driver Application"
             pendingLabel="Submitting Application..."
+            className="sm:min-w-[240px]"
           />
         </div>
       </div>
