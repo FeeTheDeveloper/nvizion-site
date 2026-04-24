@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { VeteranOwnedVerification } from "@/components/home/veteran-owned-verification";
 import { Container } from "@/components/ui/container";
 import { FreightVisual } from "@/components/ui/freight-visual";
 import { Reveal } from "@/components/ui/reveal";
@@ -14,8 +15,7 @@ import {
   homeStats,
   servicesPreview,
   siteConfig,
-  trustPoints,
-  veteranStandards
+  trustPoints
 } from "@/lib/site";
 
 const baseRegion = siteConfig.baseRegion;
@@ -291,58 +291,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="section-frame relative overflow-hidden py-20 sm:py-24 lg:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(184,154,115,0.16),transparent_36%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.015),transparent_18%,rgba(15,11,9,0.1)_100%)]" />
-        <Container className="relative z-10 grid gap-10 xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1fr)] xl:items-center">
-          <Reveal className="space-y-8">
-            <span className="inline-flex items-center border border-brand-gold/25 bg-brand-gold/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-brand-gold">
-              {siteConfig.veteranOwnedLabel} {baseRegion} Business
-            </span>
-
-            <SectionHeading
-              eyebrow="Built on Service. Powered by Standards."
-              title="Built on Service. Powered by Standards."
-              description={`${siteConfig.name} is a veteran-owned ${baseRegion} business. That identity is not just a label. It reflects how we operate. We value preparedness, accountability, respect, and mission-focused execution in every job we take on. Our goal is simple: deliver dependable transportation service that clients can trust long term.`}
-              titleClassName="sm:text-5xl lg:text-[3.75rem]"
-              descriptionClassName="max-w-2xl"
-            />
-
-            <div className="surface-card rounded-[26px] border-brand-gold/16 bg-[linear-gradient(135deg,rgba(184,154,115,0.12),rgba(255,255,255,0.02))] p-6 sm:p-7">
-              <p className="text-[0.66rem] font-semibold uppercase tracking-[0.3em] text-brand-gold">
-                Service Code
-              </p>
-              <p className="mt-4 text-base leading-8 text-brand-mist/80">
-                Our veteran-owned identity shows up in the work: prepared routing, direct
-                communication, professional conduct, and a disciplined standard that clients can
-                rely on under routine and time-sensitive conditions alike.
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={120}>
-            <div className="surface-card rounded-[32px] border-brand-gold/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.12))] p-4 sm:p-5">
-              <FreightVisual
-                variant="stack"
-                className="min-h-[320px] rounded-[26px] border-brand-gold/12 sm:min-h-[380px]"
-              />
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                {veteranStandards.map((item) => (
-                  <article
-                    key={item.title}
-                    className="border border-white/10 bg-black/[0.16] px-4 py-5 transition duration-300 hover:border-brand-gold/28 hover:bg-brand-gold/[0.07] sm:px-5"
-                  >
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-brand-gold">
-                      {item.title}
-                    </p>
-                    <p className="mt-3 text-sm leading-7 text-brand-mist/76">{item.body}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
+      <VeteranOwnedVerification />
 
       <section className="relative py-20 sm:py-24 lg:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(184,154,115,0.08),transparent_24%)]" />
